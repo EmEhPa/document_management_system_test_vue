@@ -1,7 +1,7 @@
 <script setup>
-import Header from "@/components/Header.vue"
-import Sidebar from "@/components/Sidebar.vue"
-import Footer from "@/components/Footer.vue"
+import Header from '@/components/Header.vue'
+import Sidebar from '@/components/Sidebar.vue'
+import Footer from '@/components/Footer.vue'
 </script>
 
 <template>
@@ -19,7 +19,6 @@ import Footer from "@/components/Footer.vue"
     <Footer />
   </div>
 </template>
-
 
 <style scoped>
 .layout {

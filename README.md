@@ -51,6 +51,10 @@ The new code can now be constructed! After completing the issue, run the linters
 
     $ tox
 
+For only frontend linting:
+
+    $ tox -e frontend-lint
+
 Once linters and unit tests passes in tox, do:
 
     $ git add <FILE>

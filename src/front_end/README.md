@@ -3,97 +3,133 @@
 This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
 Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
-________________________________________
+
+---
 
 # Building and Running Code
 
 ## Using Docker
 
 ### Build Instructions
-```docker build -t test_frontend .```
+
+`docker build -t test_frontend .`
 
 ### Run instructions after build
-```docker run --rm -d --name test_frontend_run -p 8080:80 test_frontend```
 
-**Open a brower and enter:** ```http://localhost:8080```
+`docker run --rm -d --name test_frontend_run -p 8080:80 test_frontend`
+
+**Open a brower and enter:** `http://localhost:8080`
 
 ### Stop docker
-```docker stop test_frontend_run```
+
+`docker stop test_frontend_run`
 
 ## To run npm and see live changes
+
 ### Install npm
-```npm install```
+
+`npm install`
 
 ### Run npm
-```npm run dev```
+
+`npm run dev`
 
 ### To stop
+
 ctrl + c
-________________________________________
+
+## Linting (frontend)
+
+Run these commands inside `/src/front_end`:
+
+`npm run lint`
+`npm run lint:fix`
+`npm run lint:ci`
+
+Or from the repository root:
+
+`npm --prefix src/front_end run lint`
+`npm --prefix src/front_end run lint:ci`
+
+---
 
 ## Troubleshooting, If you get errors:
-### Note: Vite might require node of 20.19+ 
+
+### Note: Vite might require node of 20.19+
+
 **check node.js version**
 
-```node -v```
+`node -v`
 
 ### One way to fix it: (Ubuntu)
+
 - **Remove the old node**
 
 sudo apt remove node.js
 
 - **Donwload new node**
 
-```curl -fsSL https://deb.nodesource.com/setup_22.x | sudo bash -```
+`curl -fsSL https://deb.nodesource.com/setup_22.x | sudo bash -`
 
-```sudo apt-get install -y nodejs```
+`sudo apt-get install -y nodejs`
 
-**After this the npm run dev should work. It will run the on adress:** ```http://localhost:5173```
-________________________________________
+**After this the npm run dev should work. It will run the on adress:** `http://localhost:5173`
+
+---
 
 # Accessing the DMS
 
 The only way to access the DMS now is through logging in.
 Any attempt to bypass the path by adding /search would result in being redirected to the / path.
-1. ```http://localhost:8080``` / ```http://localhost:5173```
+
+1. `http://localhost:8080` / `http://localhost:5173`
 2. Rress login
 3. Enter credentials
+
    > frontend_tester
 
    > password
-5. Access to DMS
-________________________________________
+
+4. Access to DMS
+
+---
 
 # Keycloak
-To access keycloak you can go to: ```https://ad.dms-lookup.com:8443/```
+
+To access keycloak you can go to: `https://ad.dms-lookup.com:8443/`
+
 ## Create a user
-Use the admin credentials to log in (*admin, pass*).
+
+Use the admin credentials to log in (_admin, pass_).
 
 Choose User from the left side bar.
 
 1. **Add User**
    - Leave required user actions empty
    - Leave email verified off
-        - Username
-        - Email
-        - First name
-        - Last name
+     - Username
+     - Email
+     - First name
+     - Last name
 2. **Create**
 3. **Credentials**
 4. **Set password**
-    - Enter password
-    - Re-enter password
-    - Leave temporary off
+   - Enter password
+   - Re-enter password
+   - Leave temporary off
 5. **Save password**
-________________________________________
+
+---
 
 ### Test account
+
 **username:** frontend_tester
 **password:** password
 
-________________________________________
+---
 
 # Environment Setup
+
 Before running the service, you must create a `.env` file in the /front_end/ directory.
 
 Create `.env` file following this structure:
@@ -105,7 +141,9 @@ VITE_CLIENT_ID =dms-frontend
 ```
 
 ## testing roles
+
 ### Web Browser Testing
+
 f12 -> console:
 
 `hasRole("admin")`

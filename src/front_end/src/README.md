@@ -1,6 +1,6 @@
 # Frontend Source code Structure
 
-Describtion of the frotend code (`./front_end/src/`) structure 
+Describtion of the frotend code (`./front_end/src/`) structure
 
 ## Folder layout
 
@@ -32,7 +32,6 @@ Describtion of the frotend code (`./front_end/src/`) structure
 - New app-wide frame/layout -> `layouts/`
 - New route mapping -> update `router/index.js`
 
-
-### If questions 
+### If questions
 
 - Ask frontend team :D
